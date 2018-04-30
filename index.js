@@ -95,12 +95,14 @@ bot.on('message', function(message) {
 			message.channel.send(embed).catch(console.error)
 		
 	} else if(message.content === 'd?rankMikado') {
+		
+		var userMikado = bot.users.get("301913733536415755")
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
 		.addField("Le rank de Mikado l'esclave", "Métier: **esclave**\nPoints: **-4000** points\nGrade: **esclave expert**")
 		.setFooter('Les meilleurs ranks de DevBot lel')
-		.setThumbnail(message.author.avatarURL)
+		.setThumbnail(userMikado.avatarURL)
 		message.channel.send(embed).catch(console.error)
 		
 	} 
