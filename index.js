@@ -114,7 +114,7 @@ bot.on('message', function(message) {
 		message.delete()
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
-		.setDescription("" + message.author.username + " says: " + args.join(" "))
+		.setDescription("**" + message.author.username + "**" + " a dit: " + args.join(" "))
 		message.channel.send(embed)
 		
 	} 
