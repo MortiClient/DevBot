@@ -7,6 +7,8 @@ const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const moment = require('moment')
 var i = 0;
+let args = message.content.splice(" ").slice(1);
+
 
 
 bot.on('ready', function() {
