@@ -112,7 +112,7 @@ bot.on('message', function(message) {
 		let args = message.content.splice(" ").slice(1);
 		
 		message.delete()
-		const embed = new Discord.RichEmbed()
+		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
 		.setDescription("" + message.author.username + " says: " + args.join(" "))
 		message.channel.send(embed)
