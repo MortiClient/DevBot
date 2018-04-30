@@ -96,6 +96,7 @@ bot.on('message', function(message) {
 		
 	} else if(message.content === 'd?rankMikado') {
 
+		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
 		.addField("Le rank de Mikado l'esclave", "Métier: **esclave**\nPoints: **-4000** points\nGrade: **esclave expert**")
 		.setFooter('Les meilleurs ranks de DevBot lel')
