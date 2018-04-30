@@ -108,14 +108,13 @@ bot.on('message', function(message) {
 		
 	} else if(message.content === 'd?say') {
 		
-		if (message.content === 'say') {
-			message.delete()
-			const embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.setDescription("" + message.author.username + " says: " + args.join(" "))
-			message.channel.send(embed)
+		message.delete()
+		const embed = new Discord.RichEmbed()
+		.setColor("#226666")
+		.setDescription("" + message.author.username + " says: " + args.join(" "))
+		message.channel.send(embed)
 		
-		} 
+	} 
  	
 });
 
