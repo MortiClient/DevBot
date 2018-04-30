@@ -94,6 +94,13 @@ bot.on('message', function(message) {
 			.setFooter('A propos du bot')
 			message.channel.send(embed).catch(console.error)
 		
+	} else if(message.content === 'd?rankMikado') {
+
+		.setColor("#226666")
+		.addField("Le rank de Mikado l'esclave", "Métier: **esclave**\nPoints: **-4000** points\nGrade: **esclave expert**")
+		.setFooter('Les meilleurs ranks de DevBot lel')
+		message.channel.send(embed).catch(console.error)
+		
 	} 
  	
 });
