@@ -32,8 +32,6 @@ bot.on('guildMemberAdd', function(member) {
 //Message
 bot.on('message', function(message) {
 	
-	let commands = message.content.split(" ")[0];
-	
 	Google.parse(message)
 
 	Blague.parse(message)
@@ -109,7 +107,7 @@ bot.on('message', function(message) {
 		.setThumbnail(userMikado.avatarURL)
 		message.channel.send(embed).catch(console.error)
 		
-	} else if(commands.startsWith('d?say')) {
+	} else if(message.content.startsWith('d?say')) {
 		
 		let args = message.content.splice(" ").slice(1);
 		
