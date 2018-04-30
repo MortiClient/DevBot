@@ -101,12 +101,21 @@ bot.on('message', function(message) {
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
 		.addField(message.author.username +  " s'interresse au magnifique rank de Mikado l'esclave", "Métier: **esclave**\nPoints: **-4000** points\nGrade: **esclave expert**")
-		.setDescription('*Retrouvez tous les grades dans la commande d?gradesEsclave*')
+		.setDescription('*Retrouvez tous les grades dans d?gradesEsclave*')
 		.setFooter('Les meilleurs ranks de DevBot lel')
 		.setThumbnail(userMikado.avatarURL)
 		message.channel.send(embed).catch(console.error)
 		
-	} 
+	} else if(message.content === 'd?say') {
+		
+		if (message.content === 'say') {
+			message.delete()
+			const embed = new Discord.RichEmbed()
+			.setColor("#226666")
+			.setDescription("" + message.author.username + " says: " + args.join(" "))
+			message.channel.send(embed)
+		
+		} 
  	
 });
 
