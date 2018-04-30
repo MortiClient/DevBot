@@ -7,7 +7,7 @@ const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const moment = require('moment')
 var i = 0;
-let args = message.content.splice(" ").slice(1);
+
 
 
 
@@ -108,6 +108,8 @@ bot.on('message', function(message) {
 		message.channel.send(embed).catch(console.error)
 		
 	} else if(message.content === 'd?say') {
+		
+		let args = message.content.splice(" ").slice(1);
 		
 		message.delete()
 		const embed = new Discord.RichEmbed()
