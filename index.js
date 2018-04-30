@@ -100,6 +100,7 @@ bot.on('message', function(message) {
 		.setColor("#226666")
 		.addField("Le rank de Mikado l'esclave", "Métier: **esclave**\nPoints: **-4000** points\nGrade: **esclave expert**")
 		.setFooter('Les meilleurs ranks de DevBot lel')
+		.setThumbnail(message.author.avatarURL)
 		message.channel.send(embed).catch(console.error)
 		
 	} 
