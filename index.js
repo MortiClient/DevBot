@@ -101,6 +101,7 @@ bot.on('message', function(message) {
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
 		.addField(message.author.username +  " s'interresse au magnifique rank de Mikado l'esclave", "Métier: **esclave**\nPoints: **-4000** points\nGrade: **esclave expert**")
+		.setDescription('Retrouvez tous les grades dans la commande d?gradesEsclave')
 		.setFooter('Les meilleurs ranks de DevBot lel')
 		.setThumbnail(userMikado.avatarURL)
 		message.channel.send(embed).catch(console.error)
