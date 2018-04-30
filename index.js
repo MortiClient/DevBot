@@ -107,7 +107,7 @@ bot.on('message', function(message) {
 		.setThumbnail(userMikado.avatarURL)
 		message.channel.send(embed).catch(console.error)
 		
-	} else if(message.content === 'd?say') {
+	} else if(message.content.split(" ")[0] === 'd?say') {
 		
 		let args = message.content.splice(" ").slice(1);
 		
