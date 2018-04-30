@@ -6,6 +6,7 @@ const Role = require('./commands/role')
 const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const moment = require('moment')
+let commands = message.content.split(" ")[0];
 var i = 0;
 
 
@@ -107,7 +108,7 @@ bot.on('message', function(message) {
 		.setThumbnail(userMikado.avatarURL)
 		message.channel.send(embed).catch(console.error)
 		
-	} else if(message.content.split(" ")[0] === 'd?say') {
+	} else if(commands.startsWith('d?say')) {
 		
 		let args = message.content.splice(" ").slice(1);
 		
