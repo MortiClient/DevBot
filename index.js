@@ -109,7 +109,7 @@ bot.on('message', function(message) {
 		
 	} else if(message.content.startsWith('d?say')) {
 		
-		let args = message.content.splice(" ").slice(1);
+		let args = message.content.split(" ").slice(1);
 		
 		message.delete()
 		var embed = new Discord.RichEmbed()
