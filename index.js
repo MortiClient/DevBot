@@ -107,6 +107,14 @@ bot.on('message', function(message) {
 		.setThumbnail(userMikado.avatarURL)
 		message.channel.send(embed).catch(console.error)
 		
+	} else if(message.content === 'd?addPointsMikado') {
+		if(message.author.username == 'Mortim') {
+			message.channel.send('Tu es bien Mortim le grand chef supreme')
+		} else {
+			message.channel.send('Tu n\'es pas Mortim, du balais !')
+		}
+		
+		
 	} else if(message.content.startsWith('d?say')) {
 		
 		let args = message.content.split(" ").slice(1);
