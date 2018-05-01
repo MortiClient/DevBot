@@ -6,10 +6,7 @@ const Role = require('./commands/role')
 const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const moment = require('moment')
-var pointsMikado = -4000;
-var gradeMikado = "esclave expert";
 var i = 0;
-
 
 
 
@@ -98,69 +95,16 @@ bot.on('message', function(message) {
 			.setFooter('A propos du bot')
 			message.channel.send(embed).catch(console.error)
 		
-	}  else if(message.content === 'd?addPointsMikado') {
+	}  else if(message.content === 'd?profil') {
 		
-		if(message.author.id == '312932626337890304') {
-			pointsMikado = pointsMikado + 1000;
-			
-			if(pointsMikado == -3000) {
-			   gradeMikado = 'esclave avancé niv 3';
-			} else if(pointsMikado == -2000) {
-			   gradeMikado = 'esclave avancé niv 2';
-			} else if(pointsMikado == -1000) {
-			   gradeMikado = 'esclave avancée niv 1';
-			} else if(pointsMikado == 0) {
-			   gradeMikado = 'esclave moyen';
-			} else if(pointsMikado == 1000) {
-		           gradeMikado = 'esclave noob';
-			}
+		var date_moment = moment(message.guild.createdAt)
+		date_moment = date_moment.locale('fr')
 	
-			var embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.setDescription('Les 1000 points ont été ajoutés avec succès :D')
-			message.channel.send(embed).catch(console.error)
-			
-		} else {
-			message.channel.send('Seul le chef a acces a cette commande :/')
-		}
-	
-	} else if(message.content === 'd?removePointsMikado') {
-		
-		if(message.author.id == '312932626337890304') {
-			pointsMikado = pointsMikado - 1000;
-			
-			if(pointsMikado == -4000) {
-			   gradeMikado = 'esclave expert';
-			} else if(pointsMikado == -3000) {
-			   gradeMikado = 'esclave avancé niv 3';
-			} else if(pointsMikado == -2000) {
-			   gradeMikado = 'esclave avancé niv 2';
-			} else if(pointsMikado == -1000) {
-			   gradeMikado = 'esclave avancé niv 1';
-			} else if(pointsMikado == 0) {
-		           gradeMikado = 'esclave moyen';
-			} else if(pointsMikado == 1000) {
-		           gradeMikado = 'esclave noob';
-			}
-			
-			var embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.setDescription('Les 1000 points ont été retirés avec succès :D')
-			message.channel.send(embed).catch(console.error)
-			
-		} else {
-			message.channel.send('Seul le chef a acces a cette commande :/')
-		}
-	
-	} else if(message.content === 'd?rankMikado') {
-		
-		var userMikado = bot.users.get("301913733536415755")
-
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
-		.addField(message.author.username +  " s'interresse au magnifique rank de " + userMikado.username + " l'esclave", "Métier: **esclave**\nPoints: **" + pointsMikado + "** points\nGrade: **"  + gradeMikado + "**")
-		.setFooter('Les meilleurs ranks de DevBot lel')
-		.setThumbnail(userMikado.avatarURL)
+		.addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "**")
+		.setFooter('Les meilleurs profils de DevBot')
+		.setThumbnail(message.author.avatarURL)
 		message.channel.send(embed).catch(console.error)
 		
 	} else if(message.content.startsWith('d?say')) {
