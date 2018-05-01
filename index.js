@@ -6,7 +6,6 @@ const Role = require('./commands/role')
 const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const moment = require('moment')
-let args = message.content.split(" ").slice(1);
 var i = 0;
 
 
@@ -31,6 +30,8 @@ bot.on('guildMemberAdd', function(member) {
 
 //Message
 bot.on('message', function(message) {
+	
+	let args = message.content.split(" ").slice(1);
 	
 	Google.parse(message)
 
