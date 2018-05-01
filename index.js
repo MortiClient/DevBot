@@ -124,6 +124,20 @@ bot.on('message', function(message) {
 			message.channel.send('Seul le chef a acces a cette commande :/')
 		}
 	
+	} else if(message.content === 'd?removePointsMikado') {
+		
+		if(message.author.id == '312932626337890304') {
+			pointsMikado = pointsMikado - 1000;
+			
+			var embed = new Discord.RichEmbed()
+			.setColor("#226666")
+			.setDescription('Les 1000 points ont été retirés avec succès :D')
+			message.channel.send(embed).catch(console.error)
+			
+		} else {
+			message.channel.send('Seul le chef a acces a cette commande :/')
+		}
+	
 	} else if(message.content === 'd?rankMikado') {
 		
 		var userMikado = bot.users.get("301913733536415755")
