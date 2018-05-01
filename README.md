@@ -2,11 +2,11 @@
     https://devhack.fr.nf
 
 # Devbot, ton meilleur bot !
-Invitez DevBot dans votre serveur! C'est un bot de base pour le serveur DevHack mais accessible a tout le monde désormais, il a été developpé par MortyleChef, pour l'inviter consultez le site web
+Invitez DevBot dans votre serveur! C'est un bot de base pour le serveur DevHack mais accessible a tout le monde désormais, il a été developpé par Mortim, pour l'inviter consultez le site web ci-dessus
 
 # Les commandes
 
-    d?google
+    d?google [une recherche]
     Faire une recherche google et obtenir le lien de la recherche
     _____________________________________________
     
@@ -44,3 +44,8 @@ Invitez DevBot dans votre serveur! C'est un bot de base pour le serveur DevHack 
     
     d?apropos
     Commande pour connaitre quelques informations a propos du bot
+    
+    _____________________________________________
+    
+    d?say [message]
+    Commande qui permet au bot de repeter ce que tu as ecris
