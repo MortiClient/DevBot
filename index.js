@@ -100,8 +100,7 @@ bot.on('message', function(message) {
 		
 		if(message.author.id == '312932626337890304') {
 			var pointsMikado = -4000;
-			pointsMikado = pointsMikado + 1000
-			
+	
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
 			.setDescription('Les 1000 points ont été ajoutés avec succès :D')
