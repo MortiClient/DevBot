@@ -103,7 +103,7 @@ bot.on('message', function(message) {
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
 		if(message.author.presence.game.name == null) {
-		  .addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence.status + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "**\nVous ne jouez à aucune activité**")
+		  .addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence.status + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "\n**Vous ne jouez à aucune activité**")
 		} else {
 		  .addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence.status + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "\nVous jouez à **" + message.author.presence.game.name + "**")
 		}
