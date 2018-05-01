@@ -6,6 +6,7 @@ const Role = require('./commands/role')
 const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const moment = require('moment')
+let args = message.content.split(" ").slice(1);
 var i = 0;
 
 
@@ -97,7 +98,7 @@ bot.on('message', function(message) {
 		
 	}  else if(message.content === 'd?profil') {
 		
-		var date_moment = moment(message.guild.createdAt)
+		var date_moment = moment(message.author.createdAt)
 		date_moment = date_moment.locale('fr')
 		
 		
@@ -110,8 +111,6 @@ bot.on('message', function(message) {
 		
 	} else if(message.content.startsWith('d?say')) {
 		
-		let args = message.content.split(" ").slice(1);
-		
 		message.delete()
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
@@ -120,8 +119,6 @@ bot.on('message', function(message) {
 		
 	} else if(message.content.startsWith('d?clear')) {
 		
-		  let args = message.content.split(" ").slice(1);
-		  
 		  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
 		     return message.reply('Vous n\'avez pas acces a cette commande')
 		  } else {
