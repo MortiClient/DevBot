@@ -107,7 +107,7 @@ bot.on('message', function(message) {
 		.setColor("#226666")		
 		.addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence.status + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "**")
 		.setFooter('Les meilleurs profils de DevBot')
-		.setThumbnail(message.author.avatarURL)
+		.setThumbnail(message.author.avatar)
 		message.channel.send(embed).catch(console.error)
 		
 	} else if(message.content.startsWith('d?say')) {
