@@ -129,14 +129,16 @@ bot.on('message', function(message) {
 		if(message.author.id == '312932626337890304') {
 			pointsMikado = pointsMikado - 1000;
 			
-			if(pointsMikado == -3000) {
+			if(pointsMikado == -4000) {
+			   gradeMikado = 'esclave expert';
+			} else if(pointsMikado == -3000) {
 			   gradeMikado = 'esclave avancé niv 3';
 			} else if(pointsMikado == -2000) {
 			   gradeMikado = 'esclave avancé niv 2';
 			} else if(pointsMikado == -1000) {
-			   gradeMikado = 'esclave avancée niv 1';
+			   gradeMikado = 'esclave avancé niv 1';
 			} else if(pointsMikado == 0) {
-			   gradeMikado = 'esclave moyen';
+		           gradeMikado = 'esclave moyen';
 			} else if(pointsMikado == 1000) {
 		           gradeMikado = 'esclave noob';
 			}
