@@ -30,8 +30,8 @@ Invitez DevBot dans votre serveur! C'est un bot de base pour le serveur DevHack 
     Commande qui permet d'afficher tous les roles disponibles
     _____________________________________________
     
-    d?whatis [front-end, back-end ou full-stack]
-    Commande qui permet de savoir la signification de front-end, back-end ou full-stack
+    d?profil
+    Commande qui permet de voir son profil
     _____________________________________________
     
     d?game [phrase pour savoir si elle est vraie ou fausse]
@@ -52,3 +52,4 @@ Invitez DevBot dans votre serveur! C'est un bot de base pour le serveur DevHack 
     
     d?say [message]
     Commande qui permet au bot de repeter ce que tu as ecris
+    _____________________________________________
