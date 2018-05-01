@@ -99,7 +99,8 @@ bot.on('message', function(message) {
 		
 		var date_moment = moment(message.guild.createdAt)
 		date_moment = date_moment.locale('fr')
-	
+		
+		
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")		
 		.addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence.status + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "**")
@@ -117,7 +118,16 @@ bot.on('message', function(message) {
 		.setDescription("**" + message.author.username + "**" + " a dit: " + " " + args.join(" "))
 		message.channel.send(embed)
 		
-	} 
+	} else if(message.content.startsWith('d?clear')) {
+		  
+		  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
+		     return message.reply('Vous n\'avez pas acces a cette commande')
+		  } else {
+	            message.channel.bulkDelete(args[0]).then(() => {
+			  message.channel.send(args[0] + "messages on été effacés.").then(message => message.delete(5000));
+		    }
+		  }
+	}
  	
 });
 
