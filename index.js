@@ -119,6 +119,8 @@ bot.on('message', function(message) {
 		message.channel.send(embed)
 		
 	} else if(message.content.startsWith('d?clear')) {
+		
+		  let args = message.content.split(" ").slice(1);
 		  
 		  if(!message.member.hasPermission("MANAGE_MESSAGES")) {
 		     return message.reply('Vous n\'avez pas acces a cette commande')
