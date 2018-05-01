@@ -6,6 +6,7 @@ const Role = require('./commands/role')
 const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const moment = require('moment')
+var pointsMikado = -4000;
 var i = 0;
 
 
@@ -99,7 +100,7 @@ bot.on('message', function(message) {
 	}  else if(message.content === 'd?addPointsMikado') {
 		
 		if(message.author.id == '312932626337890304') {
-			var pointsMikado = -4000;
+			pointsMikado = pointsMikado + 1000;
 	
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
