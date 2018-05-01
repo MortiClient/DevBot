@@ -102,7 +102,7 @@ bot.on('message', function(message) {
 	
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")		
-		.addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence.status + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "**" + "\nVous jouez à **" + message.author.presence.game.name == null ? 'Vous ne jouez a aucun jeu' : message.author.presence.game.name + "**")
+		.addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence.status + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "**" + message.author.presence.game.name == null ? 'Vous ne jouez a aucun jeu' : message.author.presence.game.name + "**")
 		.setFooter('Les meilleurs profils de DevBot')
 		.setThumbnail(message.author.avatarURL)
 		message.channel.send(embed).catch(console.error)
