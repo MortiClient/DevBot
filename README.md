@@ -43,8 +43,11 @@ Invitez DevBot dans votre serveur! C'est un bot de base pour le serveur DevHack 
     _____________________________________________
     
     d?apropos
-    Commande pour connaitre quelques informations a propos du bot
+    Commande pour connaitre quelques informations a propos du bot   
+    _____________________________________________
     
+    d?doc
+    Commande qui permet d'obtenir le lien de docs de languages de programmation (ou pas)
     _____________________________________________
     
     d?say [message]
