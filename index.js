@@ -108,10 +108,10 @@ bot.on('message', function(message) {
 		message.channel.send(embed).catch(console.error)
 		
 	} else if(message.content === 'd?addPointsMikado') {
-		if(message.author.username == 'Mortim') {
+		if(message.author.id == '312932626337890304') {
 			message.channel.send('Tu es bien Mortim le grand chef supreme')
 		} else {
-			message.channel.send('Tu n\'es pas Mortim, du balais !')
+			message.channel.send('Seul le chef a acces a cette commande :/')
 		}
 		
 		
