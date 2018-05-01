@@ -7,6 +7,7 @@ const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const moment = require('moment')
 var pointsMikado = -4000;
+var gradeMikado = "esclave expert";
 var i = 0;
 
 
@@ -101,6 +102,18 @@ bot.on('message', function(message) {
 		
 		if(message.author.id == '312932626337890304') {
 			pointsMikado = pointsMikado + 1000;
+			
+			if(pointsMikado == -3000) {
+			   gradeMikado = 'esclave avancé niv 3';
+			} else if(pointsMikado == -2000) {
+			   gradeMikado = 'esclave avancé niv 2';
+			} else if(pointsMikado == -1000) {
+			   gradeMikado = 'esclave avancée niv 1';
+			} else if(pointsMikado == 0) {
+			   gradeMikado = 'esclave moyen';
+			} else if(pointsMikado == 1000) {
+		           gradeMikado = 'esclave noob';
+			}
 	
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
@@ -117,7 +130,7 @@ bot.on('message', function(message) {
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
-		.addField(message.author.username +  " s'interresse au magnifique rank de " + userMikado.username + " l'esclave", "Métier: **esclave**\nPoints: **" + pointsMikado + "** points\nGrade: **esclave expert**")
+		.addField(message.author.username +  " s'interresse au magnifique rank de " + userMikado.username + " l'esclave", "Métier: **esclave**\nPoints: **" + pointsMikado + "** points\nGrade: **"  + gradeMikado + "**")
 		.setFooter('Les meilleurs ranks de DevBot lel')
 		.setThumbnail(userMikado.avatarURL)
 		message.channel.send(embed).catch(console.error)
