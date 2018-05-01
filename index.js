@@ -101,12 +101,8 @@ bot.on('message', function(message) {
 		date_moment = date_moment.locale('fr')
 	
 		var embed = new Discord.RichEmbed()
-		.setColor("#226666")
-		if(message.author.presence.game.name == null) {
-		.addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence.status + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "**")
-		} else {		
+		.setColor("#226666")		
 		.addField("Voici votre profil: ", "Pseudo: **" + message.author.username + "**\nIdentifiant: **" + message.author.id + "**\nStatut: **"  + message.author.presence.status + "**\nCe compte a été crée le **" + date_moment.format('DD MMM YYYY') + "**" + "\nVous jouez à **" + message.author.presence.game.name + "**")
-		}
 		.setFooter('Les meilleurs profils de DevBot')
 		.setThumbnail(message.author.avatarURL)
 		message.channel.send(embed).catch(console.error)
