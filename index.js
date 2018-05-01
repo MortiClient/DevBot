@@ -96,21 +96,10 @@ bot.on('message', function(message) {
 			.setFooter('A propos du bot')
 			message.channel.send(embed).catch(console.error)
 		
-	} else if(message.content === 'd?rankMikado') {
+	}  else if(message.content === 'd?addPointsMikado') {
 		
-		var userMikado = bot.users.get("301913733536415755")
-		var pointsMikado = -4000
-
-		var embed = new Discord.RichEmbed()
-		.setColor("#226666")
-		.addField(message.author.username +  " s'interresse au magnifique rank de " + userMikado.username + " l'esclave", "Métier: **esclave**\nPoints: **" + pointsMikado + "** points\nGrade: **esclave expert**")
-		.setFooter('Les meilleurs ranks de DevBot lel')
-		.setThumbnail(userMikado.avatarURL)
-		message.channel.send(embed).catch(console.error)
-		
-	} else if(message.content === 'd?addPointsMikado') {
 		if(message.author.id == '312932626337890304') {
-			pointsMikado = pointsMikado + 1000
+			var pointsMikado = pointsMikado + 1000
 			
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
@@ -120,7 +109,17 @@ bot.on('message', function(message) {
 		} else {
 			message.channel.send('Seul le chef a acces a cette commande :/')
 		}
+	
+	} else if(message.content === 'd?rankMikado') {
 		
+		var userMikado = bot.users.get("301913733536415755")
+
+		var embed = new Discord.RichEmbed()
+		.setColor("#226666")
+		.addField(message.author.username +  " s'interresse au magnifique rank de " + userMikado.username + " l'esclave", "Métier: **esclave**\nPoints: **" + pointsMikado + "** points\nGrade: **esclave expert**")
+		.setFooter('Les meilleurs ranks de DevBot lel')
+		.setThumbnail(userMikado.avatarURL)
+		message.channel.send(embed).catch(console.error)
 		
 	} else if(message.content.startsWith('d?say')) {
 		
