@@ -126,7 +126,7 @@ bot.on('message', function(message) {
 		     return message.reply('Vous n\'avez pas acces a cette commande')
 		  } else {
 	            message.channel.bulkDelete(args[0]).then(() => {
-			  message.channel.send(args[0] + "messages on été effacés.").then(message => message.delete(5000));
+			  message.channel.send(args[0] + " messages on été effacés.").then(message => message.delete(5000));
 		    })
 		  }
 	}
