@@ -12,9 +12,16 @@ module.exports = class FunGif extends Command {
 
 			let args = message.content.split(" ").slice(1)
 
-			//ORA
-		
-			if (message.content.startsWith(prefix + 'fungif:ora')) {
+			if (message.content === prefix + 'fungif') {
+
+				var embed = new Discord.RichEmbed()
+					.setColor("#226666")
+					.addField("Toutes les commandes fungif",  "-> d?fungif:ora\n-> d?fungif:pensativo\n-> d?fungif:issou")
+					message.channel.send(embed)
+
+
+			} else if (message.content.startsWith(prefix + 'fungif:ora')) {
+				
 				if(args == "") {
 					message.reply('Veuillez mentionner quelqu\'un')
 				} else {
@@ -25,9 +32,8 @@ module.exports = class FunGif extends Command {
 					message.channel.send(embed)
 				}
 
-				//Pensativo
 				
-			} else if(message.content.startsWith(prefix + 'fungif:pensativo')) {
+			} else if(message.content.startsWith(prefix + 'fungif:pensativo')) {                
 
 				if(args == "") {
 					message.reply('Veuillez mentionner quelqu\'un')
@@ -39,9 +45,9 @@ module.exports = class FunGif extends Command {
 					message.channel.send(embed)
 				}
 
-				//ISSOU
+				
 
-			} else if(message.content.startsWith(prefix + 'fungif:issou')) {
+			} else if(message.content.startsWith(prefix + 'fungif:issou')) {                   
 
 				if(args == "") {
 					message.reply('Veuillez mentionner quelqu\'un')
@@ -52,5 +58,7 @@ module.exports = class FunGif extends Command {
 					.setImage('https://media1.tenor.com/images/f86c3a13ddb998631efa393d1c289567/tenor.gif')
 					message.channel.send(embed)
 				} 
+
+			}
 	}
 }
