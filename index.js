@@ -35,8 +35,6 @@ bot.on('guildMemberAdd', function(member) {
 //Message
 bot.on('message', function(message) {
 	
-	let args = message.content.split(" ").slice(1);
-	
 	Google.parse(message)
 
 	Blague.parse(message)
