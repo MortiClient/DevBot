@@ -19,7 +19,7 @@ module.exports = class Clear extends Command {
 		  		} else {
 
 	          		message.channel.bulkDelete(args[0]).then(() => {
-			  		message.channel.send(args[0] + " messages on été effacés.").then(message => message.delete(5000));
+			  		message.channel.send(args[0] + " messages ont été effacés.").then(message => message.delete(5000));
 
 		    	})
 		 	 }
