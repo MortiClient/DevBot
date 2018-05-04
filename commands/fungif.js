@@ -23,6 +23,17 @@ module.exports = class FunGif extends Command {
 					message.channel.send(embed)
 				}
 				
+			} else if(message.content.startsWith(prefix + 'fungif:pensativo')) {
+
+				if(args == "") {
+					message.reply('Veuillez mentionner quelqu\'un')
+				} else {
+					var embed = new Discord.RichEmbed()
+					.setColor("#226666")
+					.setDescription("**" + message.author.username + "**" + " est pensativo envers " + args.join(" "))
+					.setImage('https://media1.tenor.com/images/304158e449ed30f175e8b67077c4c152/tenor.gif')
+					message.channel.send(embed)
+				}
 			}
 	}
 }
