@@ -9,6 +9,8 @@ module.exports = class Clear extends Command {
 	}
 
 	static action(message) {
+		
+			let args = message.content.split(" ").slice(1);
 			
 			 if(!message.member.hasPermission("MANAGE_MESSAGES")) {
 
