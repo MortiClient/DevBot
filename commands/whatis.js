@@ -1,16 +1,17 @@
 const Discord = require('discord.js')
 const Command = require('./command')
+const prefix = 'd?'
 
 module.exports = class Whatis extends Command {
 
 	static match(message) {
 		let content = message.content.toLowerCase();
-		return content.startsWith('d?whatis')
+		return content.startsWith(prefix + 'whatis')
 	}
 
 	static action(message) {
 		let content = message.content.toLowerCase();
-		if (content.startsWith('d?whatis front-end')) {
+		if (content.startsWith(prefix + 'whatis front-end')) {
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
@@ -18,7 +19,7 @@ module.exports = class Whatis extends Command {
 		.setFooter('Les meilleures définitions de DevBot')
 		message.channel.send(embed)
 
-		} else if(content.startsWith('d?whatis back-end')) {
+		} else if(content.startsWith(prefix + 'whatis back-end')) {
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
@@ -26,7 +27,7 @@ module.exports = class Whatis extends Command {
 		.setFooter('Les meilleures définitions de DevBot')
 		message.channel.send(embed)
 
-		} else if(content.startsWith('d?whatis full-stack')) {
+		} else if(content.startsWith(prefix + 'whatis full-stack')) {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
