@@ -1,3 +1,4 @@
+const Discord = require('discord.js')
 const Command = require('./command')
 const prefix = 'd?'
 
