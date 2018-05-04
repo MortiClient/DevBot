@@ -10,8 +10,10 @@ const Whatis = require('./commands/whatis')
 const Docs = require('./commands/docs')
 const Say = require('./commands/say')
 const Clear = require('./commands/clear')
+const FunGif = require('./commands/fungif')
 //Librairie
 const moment = require('moment')
+
 
 
 bot.on('ready', function() {
@@ -34,7 +36,8 @@ bot.on('guildMemberAdd', function(member) {
 
 //Message
 bot.on('message', function(message) {
-	
+
+
 	Google.parse(message)
 
 	Blague.parse(message)
@@ -48,6 +51,8 @@ bot.on('message', function(message) {
 	Say.parse(message)
 
 	Clear.parse(message)
+
+	FunGif.parse(message)
 
 	if(message.content === prefix + 'help') {
 
