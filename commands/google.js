@@ -1,9 +1,10 @@
 const Command = require('./command')
+const prefix = 'd?'
 
 module.exports = class Google extends Command {
 
 	static match(message) {
-		return message.content.startsWith('d?google')
+		return message.content.startsWith(prefix + 'google')
 	}
 
 	static action(message) {
