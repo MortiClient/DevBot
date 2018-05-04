@@ -12,7 +12,7 @@ module.exports = class FunGif extends Command {
 			let args = message.content.split(" ").slice(1);
 		
 			if (message.content.startsWith(prefix + 'fungif -ora')) {
-				message.reply('fait ORA ORA ORA ORA ORA à ' + " " + args.join(" ") + 'https://lc.cx/WHzc')
+				message.reply('fait ORA ORA ORA ORA ORA à ' + args + " " + 'http://urlz.fr/71go')
 			}
 	}
 }
