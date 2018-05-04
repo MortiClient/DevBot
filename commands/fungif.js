@@ -78,7 +78,7 @@ module.exports = class FunGif extends Command {
 				} else {
 					var embed = new Discord.RichEmbed()
 					.setColor("#226666")
-					.setDescription("**" + message.author.username + "**" + " ordonne que " + args.join(" ") + " suive les ordres")
+					.setDescription("**" + message.author.username + "**" + " ordonne que " + args.join(" ") + " suive ses ordres")
 					.setImage('https://78.media.tumblr.com/557fa46fbeddff94b07a15b32d570c57/tumblr_mwl398QgPA1rlox2ao1_500.gif')
 					message.channel.send(embed)
 				} 
