@@ -1,16 +1,17 @@
 const Discord = require('discord.js')
 const Command = require('./command')
+const prefix = 'd?'
 
 module.exports = class Role extends Command {
 
 	static match(message) {
-		return message.content.startsWith('d?role')
+		return message.content.startsWith(prefix + 'role')
 	}
 
 	static action(message) {
 
 		//Add role
-		if (message.content.startsWith('d?role -dev')) {
+		if (message.content.startsWith(prefix + 'role -dev')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Développeur'));
 
@@ -19,7 +20,7 @@ module.exports = class Role extends Command {
 			.addField("Role Développeur", "Role Développeur ajouté avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role -youtubeur')) {
+		} else if(message.content.startsWith(prefix + 'role -youtubeur')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Youtubeur'));
 
@@ -28,7 +29,7 @@ module.exports = class Role extends Command {
 			.addField("Role Youtubeur", "Role Youtubeur ajouté avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role -hacker')) {
+		} else if(message.content.startsWith(prefix + 'role -hacker')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Hacker'));
 
@@ -37,7 +38,7 @@ module.exports = class Role extends Command {
 			.addField("Role Hacker", "Role Hacker ajouté avec succès")
 			message.channel.send(embed)
 
-		}  else if(message.content.startsWith('d?role -graphiste')) {
+		}  else if(message.content.startsWith(prefix + 'role -graphiste')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Graphiste'));
 
@@ -46,7 +47,7 @@ module.exports = class Role extends Command {
 			.addField("Role Graphiste", "Role Graphiste ajouté avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role -gamer')) {
+		} else if(message.content.startsWith(prefix + 'role -gamer')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Gamer'));
 
@@ -55,7 +56,7 @@ module.exports = class Role extends Command {
 			.addField("Role Gamer", "Role Gamer ajouté avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role -frontend')) {
+		} else if(message.content.startsWith(prefix + 'role -frontend')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Front-end'));
 
@@ -64,7 +65,7 @@ module.exports = class Role extends Command {
 			.addField("Role Front-end", "Role Front-end ajouté avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role -backend')) {
+		} else if(message.content.startsWith(prefix + 'role -backend')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Back-end'));
 
@@ -73,7 +74,7 @@ module.exports = class Role extends Command {
 			.addField("Role Back-end", "Role Back-end ajouté avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role -fullstack')) {
+		} else if(message.content.startsWith(prefix + 'role -fullstack')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Full-stack'));
 
