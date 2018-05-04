@@ -19,7 +19,7 @@ module.exports = class FunGif extends Command {
 					var embed = new Discord.RichEmbed()
 					.setColor("#226666")
 					.setDescription("**" + message.author.username + "**" + " fait ORA ORA ORA ORA ORA à " + args.join(" "))
-					.setImage('https://tenor.com/view/ora-starplatinum-jojosbizarreadventure-jojo-gif-5505650')
+					.setImage('https://media1.tenor.com/images/4795d34aa49ada5299453dfa9960ee40/tenor.gif')
 					message.channel.send(embed)
 				}
 				
