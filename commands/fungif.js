@@ -12,7 +12,12 @@ module.exports = class FunGif extends Command {
 			let args = message.content.split(" ").slice(1);
 		
 			if (message.content.startsWith(prefix + 'fungif:ora')) {
-				message.reply('fait ORA ORA ORA ORA ORA à ' + args.join(" ") + " " + 'https://tenor.com/view/ora-starplatinum-jojosbizarreadventure-jojo-gif-5505650')
+				if(args == "") {
+				   message.reply("Veuillez mentionner quelqu'un")
+				} else {
+				   message.reply('fait ORA ORA ORA ORA ORA à ' + args.join(" ") + " " + 'https://tenor.com/view/ora-starplatinum-jojosbizarreadventure-jojo-gif-5505650')
+				}
+				
 			}
 	}
 }
