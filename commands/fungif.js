@@ -11,6 +11,8 @@ module.exports = class FunGif extends Command {
 	static action(message) {
 
 			let args = message.content.split(" ").slice(1);
+
+			//ORA
 		
 			if (message.content.startsWith(prefix + 'fungif:ora')) {
 				if(args == "") {
@@ -22,6 +24,8 @@ module.exports = class FunGif extends Command {
 					.setImage('https://media1.tenor.com/images/4795d34aa49ada5299453dfa9960ee40/tenor.gif')
 					message.channel.send(embed)
 				}
+
+				//Pensativo
 				
 			} else if(message.content.startsWith(prefix + 'fungif:pensativo')) {
 
@@ -34,6 +38,19 @@ module.exports = class FunGif extends Command {
 					.setImage('https://media1.tenor.com/images/304158e449ed30f175e8b67077c4c152/tenor.gif')
 					message.channel.send(embed)
 				}
-			}
+
+				//ISSOU
+
+			} else if(message.content.startsWith(prefix + 'fungif:issou')) {
+
+				if(args == "") {
+					message.reply('Veuillez mentionner quelqu\'un')
+				} else {
+					var embed = new Discord.RichEmbed()
+					.setColor("#226666")
+					.setDescription("**" + message.author.username + "**" + " est issou envers " + args.join(" "))
+					.setImage('https://media1.tenor.com/images/f86c3a13ddb998631efa393d1c289567/tenor.gif')
+					message.channel.send(embed)
+				} 
 	}
 }
