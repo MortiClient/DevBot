@@ -16,7 +16,7 @@ module.exports = class FunGif extends Command {
 
 				var embed = new Discord.RichEmbed()
 					.setColor("#226666")
-					.addField("Toutes les commandes fungif",  "-> d?fungif:ora\n-> d?fungif:pensativo\n-> d?fungif:issou")
+					.addField("Toutes les commandes fungif",  "-> d?fungif:ora\n-> d?fungif:pensativo\n-> d?fungif:issou\n-> d?fungif:flowey")
 					message.channel.send(embed)
 
 
@@ -59,7 +59,7 @@ module.exports = class FunGif extends Command {
 					message.channel.send(embed)
 				} 
 
-			} else if(message.content.startsWith(prefix + 'fungif:issou')) {                   
+			} else if(message.content.startsWith(prefix + 'fungif:flowey')) {                   
 
 				if(args == "") {
 					message.reply('Veuillez mentionner quelqu\'un')
