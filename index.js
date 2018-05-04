@@ -13,10 +13,6 @@ const Clear = require('./commands/clear')
 //Librairie
 const moment = require('moment')
 
-let args = message.content.split(" ").slice(1);
-
-
-
 
 bot.on('ready', function() {
 
@@ -38,6 +34,8 @@ bot.on('guildMemberAdd', function(member) {
 
 //Message
 bot.on('message', function(message) {
+	
+	let args = message.content.split(" ").slice(1);
 	
 	Google.parse(message)
 
