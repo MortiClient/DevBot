@@ -10,7 +10,7 @@ module.exports = class FunGif extends Command {
 
 	static action(message) {
 
-			let args = message.content.split(" ").slice(1);
+			let args = message.content.split(" ").slice(1)
 
 			//ORA
 		
