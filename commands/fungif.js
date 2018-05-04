@@ -59,6 +59,18 @@ module.exports = class FunGif extends Command {
 					message.channel.send(embed)
 				} 
 
+			} else if(message.content.startsWith(prefix + 'fungif:issou')) {                   
+
+				if(args == "") {
+					message.reply('Veuillez mentionner quelqu\'un')
+				} else {
+					var embed = new Discord.RichEmbed()
+					.setColor("#226666")
+					.setDescription("**" + message.author.username + "**" + " terrife " + args.join(" ") + " avec Flowey")
+					.setImage('https://cdn.discordapp.com/attachments/375754450305941506/442007040446038036/tumblr_nwk6rtcmjP1uhzkrko1_1280.gif')
+					message.channel.send(embed)
+				} 
+
 			}
 	}
 }
