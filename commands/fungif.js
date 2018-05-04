@@ -13,9 +13,13 @@ module.exports = class FunGif extends Command {
 		
 			if (message.content.startsWith(prefix + 'fungif:ora')) {
 				if(args == "") {
-				   message.reply("Veuillez mentionner quelqu'un")
+					message.reply('Veuillez mentionner quelqu\'un')
 				} else {
-				   message.reply('fait ORA ORA ORA ORA ORA à ' + args.join(" ") + " " + 'https://tenor.com/view/ora-starplatinum-jojosbizarreadventure-jojo-gif-5505650')
+					var embed = new Discord.RichEmbed()
+					.setColor("#226666")
+					.setDescription("**" + message.author.username + "**" + " fait ORA ORA ORA ORA ORA à " + args.join(" "))
+					.setImage('https://tenor.com/view/ora-starplatinum-jojosbizarreadventure-jojo-gif-5505650')
+					message.channel.send(embed)
 				}
 				
 			}
