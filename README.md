@@ -53,3 +53,7 @@ Invitez DevBot dans votre serveur! C'est un bot de base pour le serveur DevHack 
     d?say [message]
     Commande qui permet au bot de repeter ce que tu as ecris
     _____________________________________________
+    
+    d?fungif
+    Commande qui permet d'envoyer un gif a quelqu'un
+    _____________________________________________
