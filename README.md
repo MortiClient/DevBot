@@ -1,3 +1,4 @@
+<img src="https://devhack.fr.nf/images/devhack-logo-discord.png">
 # Site web
     https://devhack.fr.nf
 
