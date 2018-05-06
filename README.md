@@ -1,4 +1,4 @@
-# Site web <img src="https://devhack.fr.nf/images/logo-devhack.png" width="100">
+# Site web
     https://devhack.fr.nf
 
 #  Devbot, ton meilleur bot !
