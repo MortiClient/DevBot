@@ -1,8 +1,7 @@
-<img src="https://devhack.fr.nf/images/devhack-logo-discord.png">
 # Site web
     https://devhack.fr.nf
 
-# Devbot, ton meilleur bot !
+# <img src="https://devhack.fr.nf/images/devhack-logo-discord.png" width="60"> Devbot, ton meilleur bot !
 Invitez DevBot dans votre serveur! C'est un bot de base pour le serveur DevHack mais accessible a tout le monde désormais, il a été developpé par Mortim, pour l'inviter consultez le site web ci-dessus
 
 # Les commandes
