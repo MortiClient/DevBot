@@ -27,7 +27,7 @@ bot.on('ready', function() {
 //guildMemeberAdd
 bot.on('guildMemberAdd', function(member) {
 
-	member.guild.channels.find("name", "general").sendMessage(member.toString() + ' Bienvenue dans le serveur ' + '**' + member.guild.name + '**' + ' utilisez la commande d?all_roles pour les roles que vous souhaitez ajouter, *__n\'oubliez pas de lire le reglement__*');
+	member.guild.channels.find("name", "arrivée").sendMessage(member.toString() + ' Bienvenue dans le serveur ' + '**' + member.guild.name + '**' + ' utilisez la commande d?all_roles pour les roles que vous souhaitez ajouter, *__n\'oubliez pas de lire le reglement__*');
 
 	member.addRole(member.guild.roles.find("name", "Membre"));
 
@@ -80,7 +80,7 @@ bot.on('message', function(message) {
 		
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
-		.addField("Tous les roles disponibles", "-Développeur ->  d?role -dev\n-Youtubeur ->      d?role -youtubeur\n-Hacker ->           d?role -hacker\n-Graphiste ->      d?role -redacteur\n-Front-end ->      d?role -frontend\n-Back-end ->      d?role -backend\n-Full-stack ->      d?role -fullstack\n-Gamer->           d?role -gamer")
+		.addField("Tous les roles disponibles", "-Développeur ->  d?role -dev\n-Youtubeur ->      d?role -youtubeur\n-Hacker ->           d?role -hacker\n-Graphiste ->      d?role -frontend\n-Back-end ->      d?role -backend\n-Full-stack ->      d?role -fullstack\n-Gamer->           d?role -gamer")
 		message.channel.send(embed).catch(console.error)
 
 
