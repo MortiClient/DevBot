@@ -35,7 +35,7 @@ bot.on('guildMemberAdd', function(member) {
 
 bot.on('guildMemberRemove', function(member) {
 
-	member.guild.channels.find("name", "arrivée-départ").sendMessage(member.toString() + 'est parti :(');
+	member.guild.channels.find("name", "arrivée-départ").sendMessage('Au revoir ' + member.toString() + " on vous souhaite un bon départ");
 
 })
 
