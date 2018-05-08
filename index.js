@@ -27,9 +27,15 @@ bot.on('ready', function() {
 //guildMemeberAdd
 bot.on('guildMemberAdd', function(member) {
 
-	member.guild.channels.find("name", "arrivée").sendMessage(member.toString() + ' Bienvenue dans le serveur ' + '**' + member.guild.name + '**' + ' utilisez la commande d?all_roles pour les roles que vous souhaitez ajouter, *__n\'oubliez pas de lire le reglement__*');
+	member.guild.channels.find("name", "arrivée-départ").sendMessage(member.toString() + ' Bienvenue dans le serveur ' + '**' + member.guild.name + '**' + ' utilisez la commande d?all_roles pour les roles que vous souhaitez ajouter, *__n\'oubliez pas de lire le reglement__*');
 
 	member.addRole(member.guild.roles.find("name", "Membre"));
+
+})
+
+bot.on('guildMemberRemove', function(member) {
+
+	member.guild.channels.find("name", "arrivée-départ").sendMessage(member.toString() + 'est parti :(');
 
 })
 
