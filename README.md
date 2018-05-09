@@ -2,7 +2,7 @@
     https://devhack.fr.nf
 
 #  Devbot, ton meilleur bot !
-Invitez DevBot dans votre serveur! C'est un bot de base pour le serveur DevHack mais accessible a tout le monde désormais, il a été developpé par Mortim, pour l'inviter consultez le site web ci-dessus
+C'est un bot spécialement fait pour le serveur DevHack, il a été developpé par Mortim
 
 # Les commandes
 
