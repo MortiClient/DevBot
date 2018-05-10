@@ -83,6 +83,15 @@ module.exports = class Role extends Command {
 			.addField("Role Full-stack", "Role Full-stack ajouté avec succès")
 			message.channel.send(embed)
 
+		} else if(message.content.startsWith(prefix + 'role -streamer')) {
+
+			message.member.addRole(message.member.guild.roles.find('name', 'Streamer'));
+
+			var embed = new Discord.RichEmbed()
+			.setColor("#226666")
+			.addField("Role Streamer", "Role Streamer ajouté avec succès")
+			message.channel.send(embed)
+
 		}
 
 
@@ -171,7 +180,16 @@ module.exports = class Role extends Command {
 			.addField("Role Full-stack", "Role Full-stack retiré avec succès")
 			message.channel.send(embed)
 
-		} 
+		} else if(message.content.startsWith(prefix + 'role --streamer')) {
+
+			message.member.addRole(message.member.guild.roles.find('name', 'Streamer'));
+
+			var embed = new Discord.RichEmbed()
+			.setColor("#226666")
+			.addField("Role Streamer", "Role Streamer retiré avec succès")
+			message.channel.send(embed)
+
+		}
 
 
 		}
