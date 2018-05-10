@@ -86,7 +86,7 @@ bot.on('message', function(message) {
 		
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
-		.addField("Tous les roles disponibles", "Développeur\nd?role -dev\nYoutubeur\nd?role -youtubeur\nHacker\nd?role -hacker\nGraphiste\nd?role -graphiste\nGamer\nd?role -gamer\nStreamer\nd?role -streamer")
+		.addField("Tous les roles disponibles", "Développeur\nd?role -dev\n\nYoutubeur\nd?role -youtubeur\n\nHacker\nd?role -hacker\n\nGraphiste\nd?role -graphiste\n\nGamer\nd?role -gamer\n\nStreamer\nd?role -streamer")
 		message.channel.send(embed).catch(console.error)
 
 
