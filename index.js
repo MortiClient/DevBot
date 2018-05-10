@@ -27,7 +27,7 @@ bot.on('ready', function() {
 //guildMemeberAdd
 bot.on('guildMemberAdd', function(member) {
 
-	member.guild.channels.find("name", "arrivée-départ").sendMessage(member.toString() + ' Bienvenue dans le serveur ' + '**' + member.guild.name + '**' + ' utilisez la commande d?all_roles pour les roles que vous souhaitez ajouter, *__n\'oubliez pas de lire le reglement__*');
+	member.guild.channels.find("name", "arrivée-départ").sendMessage(member.toString() + ' Bienvenue dans le serveur ' + '**' + member.guild.name + '**' + ' utilisez la commande d?all_roles pour ajouter les roles qui vous conviennent dans le channel #bot, *__n\'oubliez pas de lire le reglement__*');
 
 	member.addRole(member.guild.roles.find("name", "Membre"));
 
@@ -77,7 +77,7 @@ bot.on('message', function(message) {
 
 		var embed = new Discord.RichEmbed()
 		.setColor("#226666")
-		.addField('Statistiques du serveur DevHack', 'Il y a actuellement ' + '**' + message.guild.channels.size + '**' +' channels dans ce serveur \nIl y a exactement ' + '**' + message.guild.members.size + '**' + ' membres dans ce serveur\nLe serveur a été crée le: ' + '**' + date_moment.format('DD MMM YYYY') + '** \nJe suis present dans ' + '**' + bot.guilds.size + '**' + ' serveurs')
+		.addField('Statistiques du serveur DevHack', 'Il y a actuellement ' + '**' + message.guild.channels.size + '**' +' channels dans ce serveur \nIl y a exactement ' + '**' + message.guild.members.size + '**' + ' membres dans ce serveur\nLe serveur a été crée le: ' + '**' + date_moment.format('DD MMM YYYY'))
 		message.channel.send(embed).catch(console.error)
 
 	
