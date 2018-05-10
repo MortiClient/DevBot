@@ -56,33 +56,6 @@ module.exports = class Role extends Command {
 			.addField("Role Gamer", "Role Gamer ajouté avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith(prefix + 'role -frontend')) {
-
-			message.member.addRole(message.member.guild.roles.find('name', 'Front-end'));
-
-			var embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.addField("Role Front-end", "Role Front-end ajouté avec succès")
-			message.channel.send(embed)
-
-		} else if(message.content.startsWith(prefix + 'role -backend')) {
-
-			message.member.addRole(message.member.guild.roles.find('name', 'Back-end'));
-
-			var embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.addField("Role Back-end", "Role Back-end ajouté avec succès")
-			message.channel.send(embed)
-
-		} else if(message.content.startsWith(prefix + 'role -fullstack')) {
-
-			message.member.addRole(message.member.guild.roles.find('name', 'Full-stack'));
-
-			var embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.addField("Role Full-stack", "Role Full-stack ajouté avec succès")
-			message.channel.send(embed)
-
 		} else if(message.content.startsWith(prefix + 'role -streamer')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Streamer'));
@@ -144,42 +117,7 @@ module.exports = class Role extends Command {
 			.addField("Role Gamer", "Role Gamer retiré avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role --journaliste')) {
-
-			message.member.removeRole(message.member.guild.roles.find('name', 'Journaliste'));
-
-			var embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.addField("Role Journaliste", "Role Journaliste retiré avec succès")
-			message.channel.send(embed)
-
-		} else if(message.content.startsWith('d?role --frontend')) {
-
-			message.member.removeRole(message.member.guild.roles.find('name', 'Front-end'));
-
-			var embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.addField("Role Front-end", "Role Front-end retiré avec succès")
-			message.channel.send(embed)
-
-		} else if(message.content.startsWith('d?role --backend')) {
-
-			message.member.removeRole(message.member.guild.roles.find('name', 'Back-end'));
-
-			var embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.addField("Role Back-end", "Role Back-end retiré avec succès")
-			message.channel.send(embed)
-
-		} else if(message.content.startsWith('d?role --fullstack')) {
-
-			message.member.removeRole(message.member.guild.roles.find('name', 'Full-stack'));
-
-			var embed = new Discord.RichEmbed()
-			.setColor("#226666")
-			.addField("Role Full-stack", "Role Full-stack retiré avec succès")
-			message.channel.send(embed)
-
+		
 		} else if(message.content.startsWith(prefix + 'role --streamer')) {
 
 			message.member.addRole(message.member.guild.roles.find('name', 'Streamer'));
@@ -192,5 +130,5 @@ module.exports = class Role extends Command {
 		}
 
 
-		}
 	}
+}
