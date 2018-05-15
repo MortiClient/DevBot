@@ -126,8 +126,10 @@ bot.on('message', function(message) {
 		    if(args) {
 			   if(message.member.hasPermission("ADMINISTRATOR")) {
 				guild.createRole()
-				.then(role => console.log(`Le role a été crée avec le nom: ` + args.join(" "))
-				.catch(console.error)
+				var embed = new Discord.RichEmbed()
+				.setColor("#226666")
+				.setDescription("Vous avez ajouté un role sous le nom de: **" + args.join("") + "**")
+				message.channel.send(embed).catch(console.error)
 		    	} else {
 				message.reply('Vous n\'avez pas les droits pour créer un role')
 			}
