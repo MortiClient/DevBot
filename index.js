@@ -132,7 +132,11 @@ bot.on('message', function(message) {
 			if(message.member.hasPermission("ADMINISTRATOR")) {
 				
 				message.guild.createRole()
-				message.role.setName(args)
+
+				if(message.role.name == args) {
+				   message.guild.setName(args)
+				}
+				
 				
 				var embed = new Discord.RichEmbed()
 				.setColor("#226666")
