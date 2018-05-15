@@ -119,7 +119,27 @@ bot.on('message', function(message) {
 		message.channel.send(embed).catch(console.error)
 
 		
-	} 
+	} else if(message.startsWith(prefixe + 'create_role')) {
+        
+        	let args = message.content.split(" ").slice(1);
+    
+		    if(args) {
+			   if(message.member.hasPermission("ADMINISTRATOR")) {
+				guild.createRole()
+				.then(role => console.log(`Le role a été crée avec le nom: ` + args.join(" ")))
+				.catch(console.error);
+		    	} else {
+				message.reply('Vous n\'avez pas les droits pour créer un role')
+			}
+		    } else {
+    
+			message.reply('Veuillez ajouter le nom du role')
+	    	}
+
+    
+    }
+
+}
  	
 });
 
