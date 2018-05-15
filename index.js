@@ -119,27 +119,27 @@ bot.on('message', function(message) {
 		message.channel.send(embed).catch(console.error)
 
 		
-	} else if(message.content.startsWith(prefix + 'create:role')) {
+	} else if(message.content.startsWith(prefix + 'rolecreate')) {
         
         	let args = message.content.split(" ").slice(1);
     
 		    if(args == "") {
-			   
-			    message.reply('Vous n\'avez pas les droits pour créer un role')
 			    
+			    message.reply('Veuillez ajouter le nom du role')
+
 		    	} else {
+			    
+			if(message.member.hasPermission("ADMINISTRATOR")) {
 				
-				if(message.member.hasPermission("ADMINISTRATOR")) {
 				message.guild.createRole()
 				var embed = new Discord.RichEmbed()
 				.setColor("#226666")
 				.setDescription("Vous avez ajouté un role sous le nom de: **" + args.join("") + "**")
 				message.channel.send(embed).catch(console.error)
+			} else {
+				
+			  	message.reply('Vous ne possedez pas les droits administrateur')	
 			}
-		    
-		    } else {
-    
-			message.reply('Veuillez ajouter le nom du role')
     
     		   }
 
