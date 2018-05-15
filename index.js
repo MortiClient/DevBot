@@ -123,7 +123,7 @@ bot.on('message', function(message) {
         
         	let args = message.content.split(" ").slice(1);
     
-		    if(args) {
+		    if(args[0]) {
 			   
 			    if(message.member.hasPermission("ADMINISTRATOR")) {
 				message.guild.createRole()
