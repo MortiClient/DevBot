@@ -72,7 +72,7 @@ module.exports = class Role extends Command {
 
 
 		//Remove role
-		if (message.content.startsWith('d?role --dev')) {
+		if (message.content.startsWith(prefix + 'role --dev')) {
 
 			message.member.removeRole(message.member.guild.roles.find('name', 'Développeur'));
 
@@ -81,7 +81,7 @@ module.exports = class Role extends Command {
 			.addField("Role Développeur", "Role Développeur retiré avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role --youtubeur')) {
+		} else if(message.content.startsWith(prefix + 'role --youtubeur')) {
 
 			message.member.removeRole(message.member.guild.roles.find('name', 'Youtubeur'));
 
@@ -90,7 +90,7 @@ module.exports = class Role extends Command {
 			.addField("Role Youtubeur", "Role Youtubeur retiré avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role --hacker')) {
+		} else if(message.content.startsWith(prefix + 'role --hacker')) {
 
 			message.member.removeRole(message.member.guild.roles.find('name', 'Hacker'));
 
@@ -99,7 +99,7 @@ module.exports = class Role extends Command {
 			.addField("Role Hacker", "Role Hacker retiré avec succès")
 			message.channel.send(embed)
 
-		}  else if(message.content.startsWith('d?role --graphiste')) {
+		}  else if(message.content.startsWith(prefix + 'role --graphiste')) {
 
 			message.member.removeRole(message.member.guild.roles.find('name', 'Graphiste'));
 
@@ -108,7 +108,7 @@ module.exports = class Role extends Command {
 			.addField("Role Graphiste", "Role Graphiste retiré avec succès")
 			message.channel.send(embed)
 
-		} else if(message.content.startsWith('d?role --gamer')) {
+		} else if(message.content.startsWith(prefix + 'role --gamer')) {
 
 			message.member.removeRole(message.member.guild.roles.find('name', 'Gamer'));
 
