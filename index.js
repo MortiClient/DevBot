@@ -127,7 +127,7 @@ bot.on('message', function(message) {
 			   if(message.member.hasPermission("ADMINISTRATOR")) {
 				guild.createRole()
 				.then(role => console.log(`Le role a été crée avec le nom: ` + args.join(" "))
-				.catch(console.error);
+				.catch(console.error)
 		    	} else {
 				message.reply('Vous n\'avez pas les droits pour créer un role')
 			}
