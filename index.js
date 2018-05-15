@@ -124,7 +124,8 @@ bot.on('message', function(message) {
         	let args = message.content.split(" ").slice(1);
     
 		    if(args) {
-			   if(message.member.hasPermission("ADMINISTRATOR")) {
+			   
+			    if(message.member.hasPermission("ADMINISTRATOR")) {
 				guild.createRole()
 				var embed = new Discord.RichEmbed()
 				.setColor("#226666")
@@ -133,15 +134,14 @@ bot.on('message', function(message) {
 		    	} else {
 				message.reply('Vous n\'avez pas les droits pour créer un role')
 			}
+		    
 		    } else {
     
 			message.reply('Veuillez ajouter le nom du role')
-	    	}
-
     
-    }
+    		   }
 
-}
+	}
  	
 });
 
