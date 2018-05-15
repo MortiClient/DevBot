@@ -119,7 +119,7 @@ bot.on('message', function(message) {
 		message.channel.send(embed).catch(console.error)
 
 		
-	} else if(message.startsWith(prefixe + 'create_role')) {
+	} else if(message.startsWith(prefix + 'create_role')) {
         
         	let args = message.content.split(" ").slice(1);
     
