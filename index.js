@@ -24,7 +24,7 @@ bot.on('ready', function() {
 })
 
 
-//guildMemeberAdd
+//guildMemberAdd
 bot.on('guildMemberAdd', function(member) {
 
 	member.guild.channels.find("name", "arrivée-départ").sendMessage(member.toString() + ' Bienvenue dans le serveur ' + '**' + member.guild.name + '**' + ' utilisez la commande d?all_roles pour ajouter les roles qui vous conviennent dans le channel #bot, *__n\'oubliez pas de lire le reglement__*');
@@ -33,6 +33,7 @@ bot.on('guildMemberAdd', function(member) {
 
 })
 
+//guildMemberRemove
 bot.on('guildMemberRemove', function(member) {
 
 	member.guild.channels.find("name", "arrivée-départ").sendMessage('Au revoir ' + member.toString() + " on vous souhaite un bon départ");
@@ -131,13 +132,8 @@ bot.on('message', function(message) {
 			    
 			if(message.member.hasPermission("ADMINISTRATOR")) {
 				
-				message.guild.createRole()
+				message.guild.createRole(${name: args, mentionable:true})
 
-				if(message.role.name == args) {
-				   message.guild.setName(args)
-				}
-				
-				
 				var embed = new Discord.RichEmbed()
 				.setColor("#226666")
 				.setDescription("Vous avez ajouté un role sous le nom de: **" + args.join("") + "**")
