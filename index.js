@@ -126,7 +126,7 @@ bot.on('message', function(message) {
 		    if(args) {
 			   
 			    if(message.member.hasPermission("ADMINISTRATOR")) {
-				guild.createRole()
+				message.guild.createRole()
 				var embed = new Discord.RichEmbed()
 				.setColor("#226666")
 				.setDescription("Vous avez ajouté un role sous le nom de: **" + args.join("") + "**")
