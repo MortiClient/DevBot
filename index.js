@@ -133,7 +133,7 @@ bot.on('message', function(message) {
 			if(message.member.hasPermission("ADMINISTRATOR")) {
 				
 				message.guild.createRole({
-				  name: args,
+				  name: args.join(" "),
 				  mentionable: true
 				})
 
