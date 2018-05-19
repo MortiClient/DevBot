@@ -34,11 +34,9 @@ bot.on('guildMemberAdd', function(member) {
 })
 
 //guildMemberRemove
-bot.on('guildMemberRemove', function(member) {
-
-	member.guild.channels.find("name", "arrivée-départ").sendMessage('Au revoir ' + member.toString() + " on vous souhaite un bon départ");
-
-})
+bot.on('guildMemberRemove', member => { 
+	member.guild.channels.get('443502304549666816').send('**Aurevoir' + member.user.username + '**,  on vous souhaite un bon départ'); 
+ });
 
 
 //Message
