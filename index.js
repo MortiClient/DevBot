@@ -98,7 +98,7 @@ bot.on('message', function(message) {
 		
 		var embed = new Discord.RichEmbed()
 			.setColor("#226666")
-			.setDescription("Le développeur du bot: **Mortim**\nSite web: https://devhack.fr.nf\nHébergeur: **Heroku**\nTwitter: https://twitter.com/karim_uchiwa")
+			.setDescription("Le développeur du bot: **Mortim**\nSite web: https://devhack.fr.nf\nHébergeur: **Heroku**\nTwitter: https://twitter.com/the_mortim")
 			.setFooter('A propos du bot')
 			message.channel.send(embed).catch(console.error)
 
