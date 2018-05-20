@@ -9,7 +9,7 @@ module.exports = class Docs extends Command {
 	}
 
 	static action(message) {
-		if (message.content === 'd?doc') {
+		if (message.content === prefix + 'doc') {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
@@ -17,7 +17,7 @@ module.exports = class Docs extends Command {
 			.setFooter('Les meilleurs docs de Devbot')
 			message.channel.send(embed).catch(console.error)
 
-		} else if (message.content.startsWith('d?doc -php')) {
+		} else if (message.content.startsWith(prefix + 'doc -php')) {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
@@ -25,7 +25,7 @@ module.exports = class Docs extends Command {
 			.setFooter('Les meilleurs docs de Devbot')
 			message.channel.send(embed).catch(console.error)
 
-		} else if (message.content.startsWith('d?doc -js')) {
+		} else if (message.content.startsWith(prefix + 'doc -js')) {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
@@ -33,7 +33,7 @@ module.exports = class Docs extends Command {
 			.setFooter('Les meilleurs docs de Devbot')
 			message.channel.send(embed).catch(console.error)
 
-		} else if (message.content.startsWith('d?doc -html/css')) {
+		} else if (message.content.startsWith(prefix + 'doc -html/css')) {
 
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
@@ -41,7 +41,7 @@ module.exports = class Docs extends Command {
 			.setFooter('Les meilleurs docs de Devbot')
 			message.channel.send(embed).catch(console.error)
 
-		} else if(message.content.startsWith('d?doc -python')) {
+		} else if(message.content.startsWith(prefix + 'doc -python')) {
 		
 			var embed = new Discord.RichEmbed()
 			.setColor("#226666")
