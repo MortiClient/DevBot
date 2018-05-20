@@ -13,8 +13,6 @@ const Clear = require('./commands/clear')
 const FunGif = require('./commands/fungif')
 //Librairie
 const moment = require('moment')
-const mysql = require('mysql')
-
 
 
 bot.on('ready', function() {
@@ -23,21 +21,6 @@ bot.on('ready', function() {
 	bot.user.setGame('coder du sale | d?help').catch(console.error)
 	
 })
-
-var con = mysql.createConnection({
-	host: "localhost",
-	user: "root",
-	password: "root",
-	database: "devcoin"
-});
-
-
-con.connect(err => {
-	if(err) throw err;
-	console.log("Connecté a la base de données");
-});
-
-
 
 //guildMemberAdd
 bot.on('guildMemberAdd', function(member) {
